@@ -1,2 +1,2 @@
 # Laboratorio-3-DOSW_Salamanca-Correa-Beltran
-David Salamanca -  Elizabeth Correa - Sebastián Beltrán - Laboratorio 3 - DOSW 2
+David Salamanca -  Elizabeth Correa - Sebastián Ortega - Laboratorio 3 - DOSW 2

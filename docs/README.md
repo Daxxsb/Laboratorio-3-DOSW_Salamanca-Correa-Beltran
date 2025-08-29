@@ -21,6 +21,7 @@
     
     A continuación las capturas donde se evidencia la implementación de las dependencias
     y la prueba de debug y ejecución.
+    
     ![1.png](imagenes%2F1.png)
     ![2.png](imagenes%2F2.png)
     ![3.png](imagenes%2F3.png)
@@ -30,11 +31,15 @@
     ![7.png](imagenes%2F7.png)
 
 #### Segundo integrante
+
 1. Estructura de carpetas
+
+
     ![estructura1.png](imagenes/estructura1.png)
     ![estructura2.png](imagenes/estructura2.png)
 
 2. Dependencias y pluggins
+
     ![jacoco.png](imagenes/jacoco.png)
 
 

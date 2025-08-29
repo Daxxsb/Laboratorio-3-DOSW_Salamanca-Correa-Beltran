@@ -15,3 +15,8 @@
 
 ## Retos Completados
 
+
+## Historial de Commits
+
+![HistorialCommits.png](docs/imagenes/HistorialCommits.png)
+

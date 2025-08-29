@@ -65,6 +65,34 @@ o	Realizar depósitos en una cuenta existente
 
 •	Reglas de negocio
 
+
+
+
+# RETO #3: Una estimacion automatizada
+
+## 1) Requerimientos
+El sistema debe permitir realizar votaciones para estimar historias de usuario usando la técnica de Planning Poker.
+Solo se aceptan los siguientes números al votar: 1, 2, 3, 5, 8, 13.
+Si se ingresa un número diferente, se muestra un mensaje de error y se solicita el voto nuevamente.
+
+
+
+
+## 2) ¿Cómo funciona el código?
+El programa muestra las historias de usuario a estimar.
+Cada integrante vota usando la secuencia permitida.
+Si todos los votos son iguales, se alcanza un acuerdo y se asigna el puntaje final a la historia.
+Si los votos son diferentes, se solicita discutir y volver a votar hasta lograr consenso.
+
+## 3) Patrones y Principios Utilizados
+
+- Principio de Responsabilidad Única (SRP): Cada clase tiene una única responsabilidad (HistoriaUsuario, Integrante, Votacion, PlanningPoker).
+- Encapsulamiento: La lógica de votación y validación está encapsulada en la clase Votacion.
+- Separación de Concerns: El flujo principal está en PlanningPoker, la representación de historias en HistoriaUsuario, y los integrantes en Integrante.
+- Facilidad de extensión y mantenimiento: La estructura permite agregar nuevas funcionalidades sin afectar el resto del sistema.
+
+---
+
 ## Historial de Commits
 
 ![HistorialCommits.png](docs/imagenes/HistorialCommits.png)

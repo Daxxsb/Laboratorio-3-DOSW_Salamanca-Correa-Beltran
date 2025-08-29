@@ -38,7 +38,6 @@ o	Las cuentas no deben contener letras ni caracteres especiales
 
 o	Cada cuenta debe estar asociada a un cliente único
 
-
 ### funcionalidades principales
 
 o	Crear una cuenta bancaria válida
@@ -65,12 +64,6 @@ o	Realizar depósitos en una cuenta existente
 •	El sistema debe verificar que la cuenta no exista.
 
 •	Reglas de negocio
-
-
-
-
-
-
 
 ## Historial de Commits
 

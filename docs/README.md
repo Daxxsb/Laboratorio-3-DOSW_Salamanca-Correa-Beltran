@@ -21,13 +21,13 @@
     
     A continuación las capturas donde se evidencia la implementación de las dependencias
     y la prueba de debug y ejecución.
-    ![1.png](imganes%2F1.png)
-    ![2.png](imganes%2F2.png)
-    ![3.png](imganes%2F3.png)
-    ![4.png](imganes%2F4.png)
-    ![5.png](imganes%2F5.png)
-    ![6.png](imganes%2F6.png)
-    ![7.png](imganes%2F7.png)
+    ![1.png](imagenes%2F1.png)
+    ![2.png](imagenes%2F2.png)
+    ![3.png](imagenes%2F3.png)
+    ![4.png](imagenes%2F4.png)
+    ![5.png](imagenes%2F5.png)
+    ![6.png](imagenes%2F6.png)
+    ![7.png](imagenes%2F7.png)
 
 #### Segundo integrante
 1. Estructura de carpetas

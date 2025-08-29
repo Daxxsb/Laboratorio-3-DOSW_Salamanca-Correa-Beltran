@@ -26,10 +26,19 @@ A partir de la lectura del caso fintech su misión es:
 
 ### Reglas de negocio
 
-
+o	Los números de cuenta deben tener exactamente 10 dígitos
+o	Los dos primeros dígitos corresponden a un banco registrado
+o	Las cuentas no deben contener letras ni caracteres especiales
+o	Cada cuenta debe estar asociada a un cliente único
 
 
 ### funcionalidades principales
+
+o	Crear una cuenta bancaria válida
+o	Validar número de cuenta según las reglas
+o	Consultar el saldo de una cuenta
+o	Realizar depósitos en una cuenta existente
+
 
 
 

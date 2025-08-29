@@ -19,24 +19,34 @@
 # Reto 1 - Identificando los Requerimientos
 
 A partir de la lectura del caso fintech su misión es:
+    
 •	Identifiquen reglas de negocio.
+
 •	Definan las funcionalidades principales.
+
 •	Escriban los actores principales.
+
 •	Documenten las precondiciones necesarias para el sistema.
 
 ### Reglas de negocio
 
 o	Los números de cuenta deben tener exactamente 10 dígitos
+
 o	Los dos primeros dígitos corresponden a un banco registrado
+
 o	Las cuentas no deben contener letras ni caracteres especiales
+
 o	Cada cuenta debe estar asociada a un cliente único
 
 
 ### funcionalidades principales
 
 o	Crear una cuenta bancaria válida
+
 o	Validar número de cuenta según las reglas
+
 o	Consultar el saldo de una cuenta
+
 o	Realizar depósitos en una cuenta existente
 
 
@@ -44,7 +54,11 @@ o	Realizar depósitos en una cuenta existente
 
 ###  Actores principales
 
+•   Cliente : Crea cuenta, consulta saldo, deposita dinero
 
+•	Sistema Bankify: Valida las reglas de negocio y guarda cuentas
+
+•	Banco externo : El banco establece las reglas sobre con qué números puede empezar una cuenta
 
 ### precondiciones necesarias para el sistema
 

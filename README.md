@@ -50,8 +50,6 @@ o	Consultar el saldo de una cuenta
 o	Realizar depósitos en una cuenta existente
 
 
-
-
 ###  Actores principales
 
 •   Cliente : Crea cuenta, consulta saldo, deposita dinero
@@ -60,9 +58,13 @@ o	Realizar depósitos en una cuenta existente
 
 •	Banco externo : El banco establece las reglas sobre con qué números puede empezar una cuenta
 
-### precondiciones necesarias para el sistema
+### Precondiciones necesarias para el sistema
 
+•	Tener definido el listado de bancos válidos.
 
+•	El sistema debe verificar que la cuenta no exista.
+
+•	Reglas de negocio
 
 
 

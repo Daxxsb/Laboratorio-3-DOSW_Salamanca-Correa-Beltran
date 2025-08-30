@@ -91,6 +91,15 @@ Si los votos son diferentes, se solicita discutir y volver a votar hasta lograr 
 - Separación de Concerns: El flujo principal está en PlanningPoker, la representación de historias en HistoriaUsuario, y los integrantes en Integrante.
 - Facilidad de extensión y mantenimiento: La estructura permite agregar nuevas funcionalidades sin afectar el resto del sistema.
 
+
+## 4) Evidencias
+
+![Reto3DinamismoEntrada.png](docs/imagenes/Reto3DinamismoEntrada.png)
+![Reto3CorrectoFuncionamiento.png](docs/imagenes/Reto3CorrectoFuncionamiento.png)
+![Reto3CasoUnIntegrante.png](docs/imagenes/Reto3CasoUnIntegrante.png)
+
+
+
 ---
 
 ## Historial de Commits

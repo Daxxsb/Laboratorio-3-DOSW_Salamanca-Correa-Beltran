@@ -4,4 +4,13 @@ public class AdministradorCuenta {
 
     private String idCuenta;
 
+    public AdministradorCuenta(String idCuenta) {
+        this.idCuenta = idCuenta;
+    }
+
+    public String getIdCuenta() {
+        return idCuenta;
+    }
+
 }
+

@@ -7,4 +7,13 @@ public class Movimiento {
     public Date fecha;
     public String numeroCuenta;
 
+    public Movimiento(double monto, Date fecha, String numeroCuenta) {
+        this.monto = monto;
+        this.fecha = fecha;
+        this.numeroCuenta = numeroCuenta;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
 }

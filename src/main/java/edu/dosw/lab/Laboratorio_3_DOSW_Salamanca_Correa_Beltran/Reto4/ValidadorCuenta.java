@@ -6,4 +6,16 @@ public class ValidadorCuenta {
 
     private List<String> longitudValidacion;
 
+
+    public ValidadorCuenta() {
+        this.longitudValidacion = new ArrayList<>();
+    }
+
+    public List<String> getLongitudValidacion() {
+        return longitudValidacion;
+    }
+
+    public void setLongitudValidacion(List<String> numero) {
+        this.longitudValidacion = longitudValidacion;
+    }
 }

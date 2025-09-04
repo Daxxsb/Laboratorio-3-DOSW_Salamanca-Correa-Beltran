@@ -73,6 +73,11 @@ o	Realizar depósitos en una cuenta existente
 ### Historias de Usuario
 
 -	**COMO** Cliente **QUIERO** crear una cuenta válida **PARA** poder ahorrar.
+-	**COMO** Cliente **QUIERO** consultar mi saldo en la cuenta **PARA** saber cuánto dinero tengo disponible.
+-	**COMO** Cliente **QUIERO** depositar dinero **PARA** aumentar el saldo de mi cuenta.
+-	**COMO** Bankify **QUIERO** validar la integridad **PARA** mantener el estandar PCI.
+
+
 # RETO #3: Una estimacion automatizada
 
 ## 1) Requerimientos
@@ -83,16 +88,13 @@ Si se ingresa un número diferente, se muestra un mensaje de error y se solicita
 
 
 
--	**COMO** Cliente **QUIERO** consultar mi saldo en la cuenta **PARA** saber cuánto dinero tengo disponible.
 ## 2) ¿Cómo funciona el código?
 El programa muestra las historias de usuario a estimar.
 Cada integrante vota usando la secuencia permitida.
 Si todos los votos son iguales, se alcanza un acuerdo y se asigna el puntaje final a la historia.
 Si los votos son diferentes, se solicita discutir y volver a votar hasta lograr consenso.
 
--	**COMO** Cliente **QUIERO** depositar dinero **PARA** aumentar el saldo de mi cuenta.
 
--	**COMO** Bankify **QUIERO** validar la integridad **PARA** mantener el estandar PCI.
 ## 3) Patrones y Principios Utilizados
 
 - Principio de Responsabilidad Única (SRP): Cada clase tiene una única responsabilidad (HistoriaUsuario, Integrante, Votacion, PlanningPoker).

@@ -1,6 +1,6 @@
 package edu.dosw.lab.testing;
 
-import edu.dosw.lab.Laboratorio_3_DOSW_Salamanca_Correa_Beltran.Reto4.*;
+import edu.dosw.lab.testing.Reto4.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -283,7 +283,6 @@ Después del refactor, todas las pruebas se ejecutan correctamente sin romper la
 **Evidencia:**  
 
 
-
 ### 🧩PATRON DE DISEÑO UTILIZADO
 
 Se utilizó el patrón de diseño **Observer** para gestionar la relación entre `Movimiento` y `AdministradorCuenta` porque permite que cada vez que ocurre un cambio en un movimiento (por ejemplo, un depósito) se notifique automáticamente al administrador, garantizando que el saldo de la cuenta se mantenga siempre actualizado sin necesidad de acoplar directamente ambas clases; de esta manera se logra un sistema más flexible, fácil de mantener y preparado para futuras extensiones, como agregar otros observadores que reaccionen a los movimientos (auditorías, notificaciones, reportes) sin modificar la lógica principal.

@@ -78,6 +78,8 @@ o	Realizar depósitos en una cuenta existente
 -	**COMO** Bankify **QUIERO** validar la integridad **PARA** mantener el estandar PCI.
 
 
+
+
 # RETO #3: Una estimacion automatizada
 
 ## 1) Requerimientos
@@ -112,11 +114,6 @@ Si los votos son diferentes, se solicita discutir y volver a votar hasta lograr 
 
 
 ---
-
-## Historial de Commits
-
-![HistorialCommits.png](docs/imagenes/HistorialCommits.png)
-
 
 # 💻 RETO #4: Tiempo De Desarrollo
 

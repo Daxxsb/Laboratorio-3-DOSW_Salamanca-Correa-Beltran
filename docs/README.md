@@ -46,7 +46,8 @@
 
 
     ![estructura1.png](imagenes/estructura1.png)
-    ![estructura2.png](imagenes/estructura2.png)
+    !
+[estructura2.png](imagenes/estructura2.png)
 
 2. Dependencias y pluggins
 
@@ -59,6 +60,9 @@
 
 --- 
 
+## Historial de Commits
+
+![HistorialCommits.png](imagenes/HistorialCommits.png)
 ## Preguntas Iniciales
 
 #### A. ¿Cual es la diferencia principal entre una prueba unitaria y una prueba de integracion E2E?

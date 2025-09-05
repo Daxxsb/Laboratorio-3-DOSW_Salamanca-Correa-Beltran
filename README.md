@@ -207,6 +207,7 @@ Después del refactor, todas las pruebas se ejecutan correctamente sin romper la
 
 **Evidencia:**  
 
+![Reto4CuentaBancariaRefactor](docs/imagenes/Reto4CuentaBancariaRefactor.png)
 
 
 
@@ -245,6 +246,7 @@ Después del refactor, todas las pruebas se ejecutan correctamente sin romper la
 
 **Evidencia:**  
 
+![Reto4AdministradorCuentaRefactor](docs/imagenes/Reto4AdministradorCuentaRefactor.png)
 
 
 
@@ -282,7 +284,7 @@ Después del refactor, todas las pruebas se ejecutan correctamente sin romper la
 
 **Evidencia:**  
 
-
+![Reto4MovimientoObserver](docs/imagenes/Reto4MovimientoObserver.png)
 
 ### 🧩PATRON DE DISEÑO UTILIZADO
 

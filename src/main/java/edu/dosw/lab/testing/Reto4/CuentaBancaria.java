@@ -1,6 +1,7 @@
 package edu.dosw.lab.testing.Reto4;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class CuentaBancaria {
     private BancoExterno banco;
     private Cliente cliente;
     private double saldo = 0.0;
-    private List<Movimiento> historial = new ArrayList<>();
+    private final List<Movimiento> historial = new ArrayList<>();
 
     public CuentaBancaria(String idCuentaBancaria, String estado) {
         this.idCuentaBancaria = idCuentaBancaria;
@@ -20,9 +21,8 @@ public class CuentaBancaria {
 
     public void depositar(double monto) {
         if (monto <= 0) throw new IllegalArgumentException("Monto debe ser > 0");
-        this.saldo += monto;
-        Movimiento m = new Movimiento(monto, new Date(), idCuentaBancaria);
-        this.historial.add(m);
+        saldo += monto;
+        historial.add(new Movimiento(monto, new Date(), idCuentaBancaria));
     }
 
     public String getIdCuentaBancaria() { return idCuentaBancaria; }
@@ -39,5 +39,6 @@ public class CuentaBancaria {
 
     public double getSaldo() { return saldo; }
 
-    public List<Movimiento> getHistorial() { return historial; }
+    public List<Movimiento> getHistorial() { return Collections.unmodifiableList(historial); }
 }
+

@@ -32,7 +32,6 @@ public class Movimiento {
         notificar();
     }
 
-    // Getters básicos para tests
     public double getMonto() { return monto; }
     public Date getFecha() { return fecha; }
     public String getNumeroCuenta() { return numeroCuenta; }

@@ -110,7 +110,8 @@ Si los votos son diferentes, se solicita discutir y volver a votar hasta lograr 
 # 💻 RETO #4: Tiempo De Desarrollo
 
 ## Enunciado
-En este reto se implementó la clase **`ValidadorCuenta`** aplicando la metodología **TDD (Test Driven Development)**.  
+En este reto se implementó la clase **`ValidadorCuenta`**, **`CuentaBancaria`**, **`AdministradorCuenta`** y **`Movimiento`** aplicando la metodología **TDD (Test Driven Development)**.  
+
 El proceso seguido fue:
 
 1. Crear pruebas unitarias con **JUnit 5**.  
@@ -120,6 +121,10 @@ El proceso seguido fue:
 5. Verificar nuevamente que las pruebas siguieran pasando.  
 
 ---
+
+
+
+> ## 🔹 CLASE VALIDADOR CUENTA
 
 ## 🧪💻 Pruebas diseñadas
 
@@ -163,6 +168,119 @@ Después del refactor, todas las pruebas se ejecutan correctamente sin romper la
 **Evidencia:**  
 ![Reto4TestRefactor1](docs/imagenes/Reto4TestRefactor1.png)
 ![Reto4TestRefactor2](docs/imagenes/Reto4TestRefactor2.png)
+
+
+
+> ## 🔹 CLASE CUENTA BANCARIA
+
+## 🧪💻 Pruebas diseñadas
+
+Se definieron distintos casos para cubrir las reglas de negocio de las cuentas:
+
+- **Saldo inicial:** al crear una cuenta, el saldo debe ser `0.0`.  
+- **Depósito válido:** al depositar un monto positivo, el saldo aumenta y se registra un movimiento con monto, fecha y número de cuenta.  
+- **Depósito inválido:** al intentar depositar `0` o un valor negativo, se lanza una excepción (`IllegalArgumentException`).  
+
+## 🔴 Ejecución inicial de pruebas
+Antes de implementar la lógica, las pruebas fallaban ya que no se tenia la implementacion de los metodos
+
+**Evidencia:**  
+![Reto4TestFallidosCuentaB](docs/imagenes/Reto4TestFallidosCuentaB.png)
+
+---
+
+## 📌 Implementación (Etapa 1)
+Se implementó una primera versión de la clase **`CuentaBancaria`**, con un atributo de saldo y un historial básico de movimientos.
+
+## ✅ Ejecución de pruebas después de la implementación
+Con la implementación de la Etapa 1, las pruebas pasan exitosamente.
+
+**Evidencia:**  
+
+
+## ⚙️📌 Refactor (Etapa 2)
+Se mejoró el código aplicando prácticas de inmutabilidad y listas no modificables para el historial, además de simplificar la lógica del depósito.
+
+## 🔧✅ Ejecución de pruebas después del refactor
+Después del refactor, todas las pruebas se ejecutan correctamente sin romper la funcionalidad.
+
+**Evidencia:**  
+
+
+
+
+> ## 🔹 CLASE ADMINISTRADOR CUENTA
+
+## 🧪💻 Pruebas diseñadas
+
+Se definieron distintos casos para cubrir las reglas de negocio de las cuentas:
+
+- **Crear cuenta válida:** se puede crear una cuenta con número correcto, asociarla a un cliente y consultar saldo inicial `0.0`.  
+- **Crear cuenta inválida:** si el número no cumple las reglas, se lanza una excepción.  
+- **Depositar desde administrador:** el administrador permite hacer un depósito, lo que incrementa el saldo y guarda un movimiento en el historial.  
+
+## 🔴 Ejecución inicial de pruebas
+Antes de implementar la lógica, las pruebas fallaban ya que no se tenia la implementacion de los metodos
+
+**Evidencia:**  
+![Reto4TestFallidosAdmin](docs/imagenes/Reto4TestFallidosAdmin.png)
+
+---
+
+## 📌 Implementación (Etapa 1)
+Se implementó una primera versión de la clase **`AdministradorCuenta`**, con un mapa interno para almacenar cuentas y un validador para los números de cuenta.
+
+## ✅ Ejecución de pruebas después de la implementación
+Con la implementación de la Etapa 1, las pruebas pasan exitosamente.
+
+**Evidencia:**  
+
+
+## ⚙️📌 Refactor (Etapa 2)
+Se optimizó el manejo de cuentas usando `Objects.requireNonNull`, validaciones más claras y mejor organización interna del código.
+
+## 🔧✅ Ejecución de pruebas después del refactor
+Después del refactor, todas las pruebas se ejecutan correctamente sin romper la funcionalidad.
+
+**Evidencia:**  
+
+
+
+
+
+> ## 🔹 CLASE MOVIMIENTO
+
+## 🧪💻 Pruebas diseñadas
+
+Se definieron distintos casos para cubrir las reglas de negocio de las cuentas:
+
+- **Notificación de movimiento:** cuando un `Movimiento` cambia su monto y tiene al `AdministradorCuenta` como observador, se notifica y el saldo de la cuenta correspondiente se actualiza correctamente.   
+
+## 🔴 Ejecución inicial de pruebas
+Antes de implementar la lógica, las pruebas fallaban ya que no se tenia la implementacion de los metodos
+
+**Evidencia:**  
+![Reto4TestFallidosMov](docs/imagenes/Reto4TestFallidosMov.png)
+
+---
+
+## 📌 Implementación (Etapa 1)
+Se implementó la clase **`Movimiento`** como sujeto con lista de observadores, y la clase **`AdministradorCuenta`** como observador que reacciona al recibir notificaciones.
+
+## ✅ Ejecución de pruebas después de la implementación
+Con la implementación de la Etapa 1, las pruebas pasan exitosamente.
+
+**Evidencia:**  
+
+
+## ⚙️📌 Refactor (Etapa 2)
+Se mejoró el código aplicando uso de `Streams` para notificar observadores, validación con `Objects.requireNonNull` y mayor encapsulamiento de atributos.
+
+## 🔧✅ Ejecución de pruebas después del refactor
+Después del refactor, todas las pruebas se ejecutan correctamente sin romper la funcionalidad.
+
+**Evidencia:**  
+
 
 
 

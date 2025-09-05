@@ -33,7 +33,7 @@ class CuentaBancariaTest {
         assertEquals(1, c.getHistorial().size());
 
         Movimiento m = c.getHistorial().get(0);
-        
+
         assertEquals(1500.0, m.getMonto(), 1e-9);
         assertEquals("0112345678", m.getNumeroCuenta());
         assertNotNull(m.getFecha());

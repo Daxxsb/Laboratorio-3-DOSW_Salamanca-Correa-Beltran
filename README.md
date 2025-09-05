@@ -107,4 +107,52 @@ Si los votos son diferentes, se solicita discutir y volver a votar hasta lograr 
 ![HistorialCommits.png](docs/imagenes/HistorialCommits.png)
 
 
+# 💻 RETO #4: Tiempo De Desarrollo
+
+## Enunciado
+En este reto se implementó la clase **`ValidadorCuenta`** aplicando la metodología **TDD (Test Driven Development)**.  
+El proceso seguido fue:
+
+1. Crear pruebas unitarias con **JUnit 5**.  
+2. Implementar la clase de validación en una primera versión (Etapa 1).  
+3. Ejecutar las pruebas y confirmar que pasaran.  
+4. Realizar un **refactor** para mejorar el código (Etapa 2).  
+5. Verificar nuevamente que las pruebas siguieran pasando.  
+
+---
+
+## 🧪💻 Pruebas diseñadas
+
+Se definieron distintos casos para cubrir las reglas de negocio de las cuentas:
+
+- **Formato válido:** cuentas con 10 dígitos (`0123456789`, `0200000000`).  
+- **Formato inválido:** vacías, con espacios, menos/más de 10 dígitos, letras o símbolos (`12345`, `01A2345678`, `00123456789`).  
+- **Nulos:** entradas `null` o `""` siempre inválidas.  
+- **Banco válido:** prefijos registrados `01`, `02` (`0112345678`, `0211111111`).  
+- **Banco inválido:** prefijos no registrados (`00`, `09`, `99`).  
+- **Validación integral:** combina ambas reglas → ejemplos válidos (`0112345678`) e inválidos (`9912345678`, `012345678`).
+
+## 🔴 Ejecución inicial de pruebas
+Antes de implementar la lógica, las pruebas fallaban ya que no se tenia la implementacion de los metodos
+
+**Evidencia:**  
+![Reto4TestFallidos](docs/imagenes/Reto4TestFallidos.png)
+
+---
+
+## 📌 Implementación (Etapa 1)
+Se implementó una primera versión de la clase **`ValidadorCuenta`**, con bucles tradicionales y validaciones básicas.
+
+## ✅ Ejecución de pruebas Despues de la implementación
+Con la implementación de la Etapa 1, las pruebas pasan exitosamente.
+
+**Evidencia:**  
+![Reto4TestSuperados1](docs/imagenes/Reto4TestSuperados1.png)
+
+
+
+
+
+
+
 

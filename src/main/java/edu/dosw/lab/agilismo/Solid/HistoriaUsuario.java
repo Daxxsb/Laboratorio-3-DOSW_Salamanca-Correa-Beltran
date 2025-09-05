@@ -1,4 +1,4 @@
-package edu.dosw.lab.Laboratorio_3_DOSW_Salamanca_Correa_Beltran.Solid;
+package edu.dosw.lab.agilismo.Solid;
 
 public class HistoriaUsuario {
     private final String descripcion;

@@ -1,4 +1,4 @@
-package edu.dosw.lab.Laboratorio_3_DOSW_Salamanca_Correa_Beltran.Reto4;
+package edu.dosw.lab.testing.Reto4;
 
 public enum BancoExterno {
     BANCO1("01", "BANCOLOMBIA"),

@@ -148,9 +148,21 @@ Con la implementación de la Etapa 1, las pruebas pasan exitosamente.
 
 **Evidencia:**  
 ![Reto4TestSuperados1](docs/imagenes/Reto4TestSuperados1.png)
+![Reto4TestSuperados2](docs/imagenes/Reto4TestSuperados2.png)
 
+## ⚙️📌 Refactor (Etapa 2)
+Se mejoró el código aplicando Streams y Lambdas:
 
+- Uso de chars().allMatch(...) para verificar que todos los caracteres sean dígitos.
 
+- Uso de Set<String> con los prefijos de bancos registrados para hacer la validación más eficiente.
+
+## 🔧✅ Ejecución de pruebas despues del refactor
+Después del refactor, todas las pruebas se ejecutan correctamente sin romper la funcionalidad.
+
+**Evidencia:**  
+![Reto4TestRefactor1](docs/imagenes/Reto4TestRefactor1.png)
+![Reto4TestRefactor2](docs/imagenes/Reto4TestRefactor2.png)
 
 
 

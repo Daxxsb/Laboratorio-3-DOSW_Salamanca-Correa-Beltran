@@ -2,15 +2,16 @@ package edu.dosw.lab.testing.Reto4;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class AdministradorCuenta implements MovimientoObserver {
 
-    private String idCuenta;
+    private final String idCuenta;
     private final Map<String, CuentaBancaria> cuentas = new HashMap<>();
     private final ValidadorCuenta validador = new ValidadorCuenta();
 
     public AdministradorCuenta(String idCuenta) {
-        this.idCuenta = idCuenta;
+        this.idCuenta = Objects.requireNonNull(idCuenta, "idCuenta");
     }
 
     public CuentaBancaria crearCuenta(Cliente cliente, String numeroCuenta, BancoExterno banco, String estado) {
@@ -40,11 +41,9 @@ public class AdministradorCuenta implements MovimientoObserver {
         return cuentas.get(numeroCuenta);
     }
 
-    // Observer: cuando un Movimiento notifica, lo aplicamos a la cuenta correspondiente
     @Override
     public void onMovimiento(Movimiento movimiento) {
-        String num = movimiento.getNumeroCuenta();
-        CuentaBancaria c = cuentas.get(num);
+        CuentaBancaria c = cuentas.get(movimiento.getNumeroCuenta());
         if (c != null && movimiento.getMonto() > 0) {
             c.depositar(movimiento.getMonto());
         }

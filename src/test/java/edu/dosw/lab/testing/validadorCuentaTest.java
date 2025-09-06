@@ -72,6 +72,50 @@ class validadorCuentaTest {
             () -> assertFalse(validador.validarCuenta(""))
         );
     }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"  ", "\t", "\n"})
+    void formato_invalido_blancos_y_espacios(String numero) {
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertFalse(v.tieneFormatoCorrecto(numero));
+        assertFalse(v.validarCuenta(numero));
+    }
+
+    @Test
+    void valida_prefijo_valido_con_ceros_intermedios() {
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertTrue(v.validarCuenta("0100000000")); // 01 + 8 dígitos
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"0000000000", "0300000000", "9900000000"})
+    void invalida_por_prefijo_o_regla_general(String numero) {
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertFalse(v.validarCuenta(numero));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"          ", "\t\t", "\n"})
+    void formato_invalido_cuando_solo_espacios(String s) {
+        assertFalse(new ValidadorCuenta().tieneFormatoCorrecto(s));
+        assertFalse(new ValidadorCuenta().validarCuenta(s));
+    }
+
+    @Test
+    void formato_valido_pero_banco_invalido_prefijo_00() {
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertTrue(v.tieneFormatoCorrecto("0012345678"));
+        assertFalse(v.esBancoValido("0012345678"));
+        assertFalse(v.validarCuenta("0012345678"));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"012345678", "01234567890"})
+    void longitudes_distintas_de_10_siempre_invalidas(String s) {
+        ValidadorCuenta v = new ValidadorCuenta();
+        assertFalse(v.tieneFormatoCorrecto(s));
+        assertFalse(v.validarCuenta(s));
+    }
 }
 
 

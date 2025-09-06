@@ -300,4 +300,45 @@ Se utilizó el patrón de diseño **Observer** para gestionar la relación entre
 
 
 
+# 🧩 Reto #5 – JaCoCo (Cobertura ≥ 85%)
+
+**Objetivo:** Configurar JaCoCo, generar el reporte de cobertura y elevar la cobertura de pruebas hasta **≥ 85%** (instrucciones y ramas).
+
+### 🔧 Configuración
+- Se configuró `jacoco-maven-plugin` con metas `prepare-agent`, `report` y `check (≥85%)`.
+- Ejecutar: `mvn clean verify` (genera `target/site/jacoco/index.html` y aplica la regla de cobertura mínima).
+
+### 📊 Cobertura inicial
+Al inicio nos daba una cobertura del 80%, por tanto añadimos mas pruebas para superar el 85%
+
+Evidencia:
+![Jacoco80.png](docs/imagenes/Jacoco80.png)
+
+### ➕ Casos de prueba añadidos
+- añadimos mas test en las clases: cliente, validadorCuenta, Banco externo y Bankify
+
+### ✅ Cobertura final (≥ 85%)
+Evidencia:
+![Jacoco85.png](docs/imagenes/Jacoco85.png)
+
+**Instrucciones:** ≥ 85%  
+**Ramas:** ≥ 85%
+
+### 📊 Dificultades con la cobertura
+
+Tuvimos dificultades al analizar la cobertura con **JaCoCo**, ya que en el reporte se mostraba un porcentaje bajo de manera general. Esto se debía a que se estaban teniendo en cuenta otras ramas del proyecto que no correspondían al **Reto 4**, lo cual hacía que el promedio global bajara.  
+
+Sin embargo, al enfocarnos únicamente en las clases y pruebas correspondientes al **Reto 4**, logramos cumplir con la condición de tener una cobertura **superior al 85%**, garantizando así la calidad del código desarrollado en este reto.
+
+
+### ✍️ Reflexión
+
+Para mejorar la cobertura fue necesario añadir casos de prueba que validaran tanto los **escenarios felices** como los **escenarios de error**. En particular, se incluyeron pruebas que verifican la creación de objetos con valores inválidos (nulos, vacíos o negativos), el correcto funcionamiento de los setters, así como la ejecución de métodos especiales como `toString`, `equals` y `hashCode`.  
+
+Este proceso permitió cubrir ramas del código que inicialmente no se ejecutaban en los tests básicos, asegurando que todas las validaciones y condiciones fueran comprobadas. La métrica de cobertura es importante porque no solo indica cuánta parte del código ha sido probada, sino que ayuda a detectar posibles fallos antes de que lleguen a producción, generando así un software más **confiable, robusto y mantenible**.
+
+
+
+
+
 

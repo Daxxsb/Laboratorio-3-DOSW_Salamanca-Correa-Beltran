@@ -47,4 +47,21 @@ class CuentaBancariaTest {
             () -> assertThrows(IllegalArgumentException.class, () -> c.depositar(-10))
         );
     }
+
+    @Test
+    void set_y_get_banco_y_cliente_y_cambios_de_estado() {
+        CuentaBancaria c = new CuentaBancaria("0199999999", "PENDIENTE");
+        c.setEstado("ACTIVA");
+        c.setIdCuentaBancaria("0211111111");
+
+        assertEquals("ACTIVA", c.getEstado());
+        assertEquals("0211111111", c.getIdCuentaBancaria());
+
+        Cliente cli = new Cliente("C9", "Luz", "Diaz", 42, "X", 123);
+        c.setCliente(cli);
+        c.setBanco(BancoExterno.BANCO2);
+
+        assertSame(cli, c.getCliente());
+        assertEquals(BancoExterno.BANCO2, c.getBanco());
+    }
 }

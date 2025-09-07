@@ -337,8 +337,48 @@ Para mejorar la cobertura fue necesario añadir casos de prueba que validaran ta
 
 Este proceso permitió cubrir ramas del código que inicialmente no se ejecutaban en los tests básicos, asegurando que todas las validaciones y condiciones fueran comprobadas. La métrica de cobertura es importante porque no solo indica cuánta parte del código ha sido probada, sino que ayuda a detectar posibles fallos antes de que lleguen a producción, generando así un software más **confiable, robusto y mantenible**.
 
+---
+# Reto #6 – SonarQube
+---
+
+
+## 📌 Descripción
+En este reto se realizó el análisis estático de código utilizando **SonarQube** con Docker y su integración en el proyecto Maven.  
 
 
 
+## ⚙️ Pasos realizados
+
+1. Descarga e instalación de Docker Desktop.
+2. Descarga y ejecución del contenedor de SonarQube:
+   ```bash
+   docker pull sonarqube
+   docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+
+3. Acceso a la interfaz web de SonarQube en http://localhost:9000
+4. Cambio de credenciales iniciales (admin/admin).
+5. Generación de un token de acceso para Maven.
+6. Configuración del pom.xml con los plugins de SonarQube y Jacoco.
+7. Ejecución del análisis con:
+    ```bash
+   mvn verify sonar:sonar -Dsonar.token=[TOKEN_GENERADO]
+8. Validación del análisis desde la interfaz de SonarQube.
+
+# 📸 Evidencias
+
+![AnalisisSonarQube.png](docs/imagenes/AnalisisSonarQube.png)
 
 
+## Reflexiones del equipo
+
+### Sebastian Ortega
+
+Considero que es importante realizar pruebas a un software diseñado porque permiten detectar errores antes de que lleguen al usuario final. Esto ahorra costos, mejora la calidad del producto y genera mayor confianza en el equipo de desarrollo.
+
+### Elizabeth Correa
+
+Las pruebas son fundamentales porque ayudan a verificar que el sistema cumple con los requisitos y que funciona en diferentes escenarios. Sin pruebas, el software puede fallar en producción y afectar la experiencia de los usuarios.
+
+### David Salamanca
+
+Para mí, hacer pruebas es clave porque asegura la mantenibilidad del proyecto. Un software sin pruebas se vuelve riesgoso de modificar, mientras que con pruebas automatizadas es más sencillo garantizar la estabilidad del sistema.
